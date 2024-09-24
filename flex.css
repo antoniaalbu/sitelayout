@@ -1,0 +1,118 @@
+/* Global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; 
+    background-color: #000000;
+}
+
+/* Container for flex layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Flex body to arrange sidebar and main content */
+.flex-body {
+    display: flex;
+    flex: 1; /* Take remaining space */
+}
+
+/* Header styles */
+.header {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #7b2ffe;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 110px; /* Fixed width for the sidebar */
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.sidebar nav ul li a:hover {
+    color: #ffff12;
+}
+
+/* Main content styles */
+.main-content {
+    display: flex;
+    flex: 1; /* Take the remaining height */
+    padding: 20px;
+    background-color: #000000;
+    gap: 10px; /* Space between columns */
+}
+
+/* Column styles */
+.flex-column {
+    flex: 1; /* Equal width columns */
+    height: 100%; /* Full height */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.flex-column:hover {
+    transform: scale(1.02);
+}
+
+/* Specific background images for columns */
+.column1 {
+    background-image: url('images/main_picture.jpg');
+}
+
+.column2 {
+    background-image: url('images/main_photo1.jpg');
+}
+
+.column3 {
+    background-image: url('images/project1.webp');
+}
+
+.footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Stack the columns vertically */
+    }
+
+    .flex-column {
+        height: auto; /* Adjust height for vertical stacking */
+    }
+}
